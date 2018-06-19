@@ -24,3 +24,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#I do not want to show the gitignor.txt
+/gitignor_teszt.txt
