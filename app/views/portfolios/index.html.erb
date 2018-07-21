@@ -4,5 +4,5 @@
   <p><%= valtozo_item.title %></p>
   <p><%= valtozo_item.subtitle %></p>
   <p><%= valtozo_item.body %></p>
-  <%= image_tag valtozo_item.thumb_image %>
+  <%= image_tag valtozo_item.thumb_image if !valtozo_item.thumb_image.nil?%>
 <% end %>
