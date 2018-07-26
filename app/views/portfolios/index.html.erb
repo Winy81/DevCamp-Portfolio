@@ -1,8 +1,11 @@
 <h1>Portfoilo Items</h1>
 
+<%= link_to "Create New Item", new_portfolio_path %>
+
 <% @portfolio_items.each do |valtozo_item| %>
   <p><%= valtozo_item.title %></p>
   <p><%= valtozo_item.subtitle %></p>
   <p><%= valtozo_item.body %></p>
-  <%= image_tag valtozo_item.thumb_image if !valtozo_item.thumb_image.nil?%>
+  <%= image_tag valtozo_item.thumb_image if !valtozo_item.thumb_image.nil? %>
+  <%= link_to "Edit", edit_portfolio_path(valtozo_item.id) %>
 <% end %>
