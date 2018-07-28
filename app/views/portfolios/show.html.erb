@@ -1,0 +1,9 @@
+<h1>Portfolios Show</h1>
+
+<%= image_tag @portfolio_item.main_image if !@portfolio_item.main_image.nil? %>
+
+<h2>Number of post: <%= @portfolio_item.id %></h2>
+<h2>Title of post: <%= @portfolio_item.title %></h2>
+<h3><%= @portfolio_item.subtitle %></h3>
+<p><%= @portfolio_item.body %></p>
+<h3>Created at: <%= @portfolio_item.created_at %></h3>
