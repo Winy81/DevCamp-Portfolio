@@ -4,4 +4,6 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
 
   validates_presence_of :title, :body #Ez a record crealasnal a kitel, mi nem lehet nill 
+
+  belongs_to :topic
 end

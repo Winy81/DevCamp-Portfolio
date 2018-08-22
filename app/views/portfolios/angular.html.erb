@@ -1,0 +1,8 @@
+<p>Filtered for angular</p>
+
+
+<% @angular_portfolio_items.each do |valtozo_item| %>
+  <h2><%= link_to valtozo_item.title, portfolio_show_path(valtozo_item.id) %></h2>
+  <p><%= valtozo_item.subtitle %></p>
+  <p><%= valtozo_item.body %></p>
+  <% end %>
