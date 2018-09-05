@@ -52,7 +52,7 @@ puts "+1 portfolio item created"
          )
 end
 
-puts "3 Technologies created"
+puts "eee3 Technologies created"
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
