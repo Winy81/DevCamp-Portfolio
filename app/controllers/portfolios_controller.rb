@@ -8,7 +8,9 @@ class PortfoliosController < ApplicationController
 	end
 
 	def create
-	  @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image))	
+	  @portfolio_item = Portfolio.new(portfolio_params)
+
+    #helyben ez lenne a new utan: (params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image))	
 
 	  respond_to do |format|
 	  	if @portfolio_item.save
@@ -27,7 +29,8 @@ class PortfoliosController < ApplicationController
        @portfolio_item = Portfolio.find(params[:id])
 
     respond_to do |format|
-      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
+      if @portfolio_item.update(portfolio_params)
+       #ugyan ugy az elternativa helyben: (params.require(:portfolio).permit(:title, :subtitle, :body))
         format.html { redirect_to portfolios_path, notice: 'The record was successfully updated.' }
       else
         format.html { render :edit }
@@ -48,6 +51,18 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Portfolio item was successfully destroyed.' }
     end
+  end
+
+  private #ez azt jeelnti hogy csak ebben a classban jelen esetben ebben a fileban hasznalhato (hivhato)
+  
+  def portfolio_params
+    params.require(:portfolio).permit(:title, 
+                                      :subtitle, 
+                                      :body, 
+                                      :thumb_image, 
+                                      technologies_attributes: [:name]
+                                      )
 
   end
+
 end
