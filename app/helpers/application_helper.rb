@@ -1,5 +1,5 @@
 module ApplicationHelper
-	def sample_helper
+	def sample_help
 		"<hr>".html_safe
 		#mivel a p html ahoz hogy lefusson kell moge a .html_safe
 	end
@@ -13,4 +13,11 @@ module ApplicationHelper
          (link_to "Login", new_user_session_path)
         end
     end
+
+    def source_hepler(layout_name)
+    	if session[:source]
+          greeting = "Thanks for visiting me from #{session[:source]} and you are on the #{layout_name} part of the Site"
+          content_tag(:p, greeting, class:"source-greeting")
+      end
+    end 
 end
