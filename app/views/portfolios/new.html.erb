@@ -1,36 +1,4 @@
 <h1>Create a new portfolio Item</h1>
 
-<%= form_for(@portfolio_item) do |f| %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+<%= render 'form', portfolio_item: @portfolio_item %>
 
-  <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_area :subtitle %>
-  </div>
-
-   <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-   </div>
-
-   <div class="field">
-    <p>Link for image</p>
-    <%= f.text_area :thumb_image %>
-   </div>
-
-   <ul>
-     <%= f.fields_for :technologies do |technologies_form| %>
-     <li>
-       <%= technologies_form.label :name %>
-       <%= technologies_form.text_field :name %>
-     </li>
-     <%end%>
-   </ul>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

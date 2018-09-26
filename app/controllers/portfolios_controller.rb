@@ -1,5 +1,9 @@
 class PortfoliosController < ApplicationController
-	def index
+  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
+  layout 'portfolio'
+  access all: [:show, :index, :angular], user:{except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+	
+  def index
       @portfolio_items = Portfolio.all
 	end
 
@@ -17,7 +21,9 @@ class PortfoliosController < ApplicationController
 	end
 
 	def create
-	  @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, technologies_attributes: [:name]))	
+	  @portfolio_item = Portfolio.new(portfolio_params)
+
+    #helyben ez lenne a new utan: (params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image))	
 
 	  respond_to do |format|
 	  	if @portfolio_item.save
@@ -29,14 +35,13 @@ class PortfoliosController < ApplicationController
 	end
 
 	def edit
-       @portfolio_item = Portfolio.find(params[:id])
+       
 	end
 
 	def update
-       @portfolio_item = Portfolio.find(params[:id])
-
     respond_to do |format|
-      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
+      if @portfolio_item.update(portfolio_params)
+       #ugyan ugy az elternativa helyben: (params.require(:portfolio).permit(:title, :subtitle, :body))
         format.html { redirect_to portfolios_path, notice: 'The record was successfully updated.' }
       else
         format.html { render :edit }
@@ -45,18 +50,33 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-  	@portfolio_item = Portfolio.find(params[:id])
+
   end
 
   def destroy
   	#Perform to look up
-  	@portfolio_item = Portfolio.find(params[:id])
+  	# @portfolio_item = Portfolio.find(params[:id])
     #Destroy tyhe recrod
   	@portfolio_item.destroy
     #Redirect
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Portfolio item was successfully destroyed.' }
     end
-
   end
+
+  private #ez azt jeelnti hogy csak ebben a classban jelen esetben ebben a fileban hasznalhato (hivhato)
+  
+  def portfolio_params
+    params.require(:portfolio).permit(:title, 
+                                      :subtitle, 
+                                      :body, 
+                                      :thumb_image, 
+                                      technologies_attributes: [:name]
+                                      )
+  end
+
+  def set_portfolio_item
+     @portfolio_item = Portfolio.find(params[:id])
+  end
+
 end

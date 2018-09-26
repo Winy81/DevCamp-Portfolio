@@ -6,26 +6,18 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Date</th>
       <th>Body</th>
       <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    </tbody>
-    <% end %>
+    <%= render @blogs %>
+    <%-#ez csak azert mukodik, mert ugyan egy valtozt render-el de amikor a rails a instance valtozot letrehozza akkor a rails eloszor azt nezi meg, hogy van e particial a konyvtarban ezen a neven singularban. Ha van akkor azt lerendereli. Ha nincs akkor dob hibat. Ezert a nev az fontos itt a globalis valtozo tobbesszam mig a partical same name with singular. -%>   
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
