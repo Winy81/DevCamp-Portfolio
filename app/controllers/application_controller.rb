@@ -6,5 +6,4 @@ class ApplicationController < ActionController::Base
 	include CurrentUserConcern #belogolt es guest userek megkulonboztetesere
     include DefaultPageContent #Alap cimeballitas a bongeszo fuleben
 	
-
-end
+ end
