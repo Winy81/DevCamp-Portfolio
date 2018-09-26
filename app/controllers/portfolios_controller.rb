@@ -1,9 +1,14 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
   layout 'portfolio'
+  access all: [:show, :index, :angular], user:{except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 	def index
       @portfolio_items = Portfolio.all
 	end
+
+  def angular
+      @angular_portfolio_items = Portfolio.angular
+  end
 
 	def new
       @portfolio_item = Portfolio.new
@@ -28,8 +33,6 @@ class PortfoliosController < ApplicationController
 	end
 
 	def update
-       
-
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
        #ugyan ugy az elternativa helyben: (params.require(:portfolio).permit(:title, :subtitle, :body))
@@ -64,7 +67,6 @@ class PortfoliosController < ApplicationController
                                       :thumb_image, 
                                       technologies_attributes: [:name]
                                       )
-
   end
 
   def set_portfolio_item

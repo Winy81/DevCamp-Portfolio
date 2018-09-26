@@ -8,10 +8,11 @@ module CurrentUserConcern #a nevnek egyezni kell a file nevvel az undescore bol 
   end
 
   def guest_user_for_check
-     OpenStruct.new(name: "Guest User", 
-     	            first_name: "Guest", 
-     	            last_name: "User", 
-     	            email: "guest@email.com"
-     	            )
+    guest = GuestUser.new
+    guest.name = "Guest User"
+    guest.first_name = "Guest"
+    guest.last_name = "User"
+    guest.email = "guest@example.com"
+    guest #ezzel az ertekkkel ter vissza a fuggveny
   end
 end
