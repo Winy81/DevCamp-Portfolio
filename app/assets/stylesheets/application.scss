@@ -109,4 +109,20 @@ body {
   color: rgba(255, 255, 255, .5);
 }
 
+/*
+ * Custom Styles
+ */
 
+.card-body {
+  color:black;
+  text-align:left;
+}
+
+.cancel-mid{
+  margin-top:100%;
+}
+
+.auth-links a{
+  font-size:125%;
+  color:black;
+}
