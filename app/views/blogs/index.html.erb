@@ -1,11 +1,11 @@
 <div class="col-md-8 blog-main">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
-            From the Firehose
+            What we are talking about:
           </h3>
           
             <%= render @blogs %>
     <%-#ez csak azert mukodik, mert ugyan egy valtozt render-el de amikor a rails a instance valtozot letrehozza akkor a rails eloszor azt nezi meg, hogy van e particial a konyvtarban ezen a neven singularban. Ha van akkor azt lerendereli. Ha nincs akkor dob hibat. Ezert a nev az fontos itt a globalis valtozo tobbesszam mig a partical same name with singular. -%>   
-
+     
 
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>

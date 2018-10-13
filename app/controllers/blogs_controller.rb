@@ -7,7 +7,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order(:id).all
     @page_title = "My Portfolio Blog" #cimsor beallitas a bongeszoben a blog sekcioban
   end
 
