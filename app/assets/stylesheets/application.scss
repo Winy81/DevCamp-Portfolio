@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome.css";
 
 /*
  * Globals
@@ -139,6 +140,10 @@ body {
   width:22rem;
   margin: 0 auto;
   float:none;
+}
+
+.link_for_mail{
+  font-size:3em
 }
 
 
