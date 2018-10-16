@@ -1,0 +1,41 @@
+<head><%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %></head>
+
+<header class="bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4 align-bottom mt-5 mb-5">
+
+                     <h1 class="text-muted font-italic align-middle">Explore the Portfolio Part of Adam's site</h1></td>
+                     
+                       <nav class="list-unstyled">
+                       <%= link_to "Home", root_path, class:"p-2 text-muted" %>
+                       <%= link_to "About Me", about_me_path, class:"p-2 text-muted" %>
+                       <%= link_to "Contact", contact_path, class:"p-2 text-muted" %>
+                       <%= link_to "Blog", blogs_path, class:"p-2 text-muted" %>
+                       <%= link_to "Portfolio", portfolios_path, class:"p-2 text-muted" %>
+                       </nav>
+     
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark shadow-sm border boreder-left-0 border-right-0 ">
+        <div class="container d-flex justify-content-between">
+          <div class="col-rw-4">
+          
+            <%= link_to "Contact with the owner of this Site", about_me_path, class:"text-muted"  %>
+
+          </div>
+          
+          <div class="col-rw-2">
+          </div>
+          <div class="col-rw-6">
+          <%= login_helper 'p-2 text-primary' %>
+          </div>
+        </div>
+    
+
+
+
+</header>
