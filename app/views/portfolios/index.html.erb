@@ -1,21 +1,14 @@
-
-
-<div class="album py-5 bg-white border boreder-left-0 border-right-0 border-bottom-0">
+<div class="album py-5 bg-white">
         <div class="container">
 
           <div class="row">
 
-          	
-        
+
              <%#-    <%= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin) %> 
 
-                    
+                <%= render partial: 'portfolio_item', collection: @portfolio_items %>
 
-                   <%= render partial: 'portfolio_item', collection: @portfolio_items %>
-
-
-            
         </div>
     </div>
 </div>
-</main>
+
