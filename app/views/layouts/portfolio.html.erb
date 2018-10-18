@@ -23,34 +23,17 @@
     <!-- End of Navigation -->
 
 
-      <!-- Start fo Masthead -->
+    <!-- Start fo Masthead -->
 
-      <section class="jumbotron text-center bg-light">
-        <div class="container ">
-          <h1 class="jumbotron-heading text-secondary ">Portfolio Galery</h1>
-          <p class="lead text-muted">Couple of example of my works. If you have any question please do not hesitate contatct with me or if you would like to see more, just go and explore the blog part of the site too...</p>
-          <p>
-            <%= link_to "Contact Me", contact_path, class:"btn btn-primary" %>
-            <%= link_to "Blogs", blogs_path, class:"btn btn-secondary" %>
-          </p>
-        </div>
-      </section>
+    <%= render "shared/portfolio_masthead" %>
 
-      <!-- End of masthead -->
+    <!-- End of masthead -->
 
     <%= yield %>
 
-    <!-- Start fo Masthead -->
+    <!-- Start fo Footer -->
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
-    </footer>
+   <%= render "shared/portfolio_footer" %>
 
     <!-- End of Footer -->
 
