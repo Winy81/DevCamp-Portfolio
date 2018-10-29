@@ -66,7 +66,7 @@ gem 'friendly_id', '~> 5.2.0'
 
 gem 'devise', '~> 4.5'
 
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap'
 
 gem 'devcamp_view_tool', '~> 0.1.0'
 

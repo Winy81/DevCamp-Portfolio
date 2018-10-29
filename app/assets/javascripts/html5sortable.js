@@ -1,4 +1,4 @@
-alert('this from html5sortable.js')
+// alert('this from html5sortable.js')
 
 var sortable = (function () {
     'use strict';
