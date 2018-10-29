@@ -1,4 +1,4 @@
-alert('this from portfolios_coffee.js')
+// alert('this from portfolios_coffee.js')
 
 document.addEventListener("turbolinks:load", function() {
 
