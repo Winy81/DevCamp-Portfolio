@@ -19,11 +19,14 @@
     
   </head>
 
-  <body>
+  <body <% if current_page?(root_path) %> style="background-image: url('/assets/hard_disk_back.jpg'); background-repeat:no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+  " <% end %>>
 
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-   <%= render "shared/application_nav"%>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
+    
+
+    <%= render "shared/application_nav"%>
 
     <main role="main" class="inner cover">
 
