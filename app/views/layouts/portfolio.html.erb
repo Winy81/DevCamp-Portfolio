@@ -33,6 +33,7 @@
     <%#- Az unless szedi ki a mastheade-et a view-bol ha be vagyunk logolva -%>
     <%= render "shared/portfolio_masthead" unless logged_in?(:site_admin) %>
 
+
     <!-- End of masthead -->
 
     <%= yield %>
