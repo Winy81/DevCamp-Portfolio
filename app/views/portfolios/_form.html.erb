@@ -2,6 +2,7 @@
 <%= form_for(@portfolio_item) do |f| %>
 <div class="row">
   <div class="col-md-6">
+    <h3>Tag details</h3></br>
     <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title, class:"form-control" %>
@@ -23,16 +24,18 @@
      </div>
      
   </div>
-  <div class="col-md-6">
-     <div>
-       <%= f.fields_for :technologies do |technologies_form| %>
-         <div class="form-group">
-          <%= technologies_form.label :name %>
-          <%= technologies_form.text_field :name, class:"form-control" %>
-         </div>
+ <div class="col-md-6">
+    <h3>Technologies details</h3></br>
+      <div>
+       <%= f.fields_for :technologies do |technology_form| %>
+       <%= render 'technology_fields', f: technology_form %>
+       <!-- innen az f: valtozot adjuk at a partical fileba -->
        <% end %>
+      </div>
+    <div>
+       <%= link_to_add_association 'Add More Technologies', f, :technologies %>
+        <!--Az itt levo f az nem a blokkbol jon hanem az a form f-je amit pl feljebb hasznalunk a loopokban az oldal tetejerol -->
     </div>
-
   </div>
   <div class="col-md-12">
 

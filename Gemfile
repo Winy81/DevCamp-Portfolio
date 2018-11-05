@@ -84,5 +84,5 @@ gem 'bootstrap4-kaminari-views'
 
 gem 'coffee-script', '~> 2.4', '>= 2.4.1'
 
-
+gem 'cocoon', '~> 1.2', '>= 1.2.12'
 
