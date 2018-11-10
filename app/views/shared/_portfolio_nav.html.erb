@@ -21,9 +21,9 @@
           <div class="col-rw-4">
           
             <% if logged_in?(:site_admin) %>
-            <%= link_to "Create new Portfolio Post", new_portfolio_path, class:"text-muted" %>
+            <%= link_to "Create new Portfolio Post", new_portfolio_path, class:"text-primary" %>
             <% else %>
-            <%= link_to "Contact with the owner of this Site", about_me_path, class:"text-muted"  %>
+            <%= link_to "Contact with the owner of this Site", about_me_path, class:"text-primary"  %>
             <% end %>
 
           </div>
