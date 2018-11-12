@@ -3,7 +3,7 @@
 
   <h2><%= @blog.title %></h2>
 
-  <p><%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> / 
+  <p><%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> / <%= link_to 'Destroy', @blog,class:"text-danger", method: :delete, data: {confirm: "Are you sure"} if logged_in?(:site_admin)%>  / 
   <%= link_to 'Back', blogs_path %></p>
 
 

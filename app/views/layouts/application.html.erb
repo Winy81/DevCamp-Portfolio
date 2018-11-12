@@ -11,25 +11,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
-  <body>
+  <body <% if current_page?(root_path) %> style="background-image: url('/assets/hard_disk_back.jpg'); background-repeat:no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+  " <% end %>>
 
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-   <%= render "shared/application_nav"%>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
+    
+
+    <%= render "shared/application_nav"%>
 
     <main role="main" class="inner cover">
 
     <%= yield %>
 
     </main>
-
+     
+    <%= render "shared/alerts" %>
     
-    <%= render "shared/application_footer"%>
+    <%= render "shared/application_footer" %>
 
 </div>
   </body>

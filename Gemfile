@@ -66,7 +66,7 @@ gem 'friendly_id', '~> 5.2.0'
 
 gem 'devise', '~> 4.5'
 
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap'
 
 gem 'devcamp_view_tool', '~> 0.1.0'
 
@@ -74,8 +74,15 @@ gem 'petergate', '~> 1.8', '>= 1.8.1'
 
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'bootstrap_form'
 gem 'bootstrap4-kaminari-views'
+
+
+gem 'cocoon', '~> 1.2', '>= 1.2.12'
+gem 'gritter'
+

@@ -10,8 +10,13 @@
     <%= csp_meta_tag %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'html5sortable', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'portfolios_coffee', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -23,34 +28,19 @@
     <!-- End of Navigation -->
 
 
-      <!-- Start fo Masthead -->
+    <!-- Start fo Masthead -->
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading text-secondary">Portfolio Galery</h1>
-          <p class="lead text-muted">Couple of example of my works. If you have any question please do not hesitate contatct with me or if you would like to see more, just go and explore the blog part of the site too...</p>
-          <p>
-            <%= link_to "Contact Me", contact_path, class:"btn btn-primary" %>
-            <%= link_to "Blogs", blogs_path, class:"btn btn-secondary" %>
-          </p>
-        </div>
-      </section>
+    <%#- Az unless szedi ki a mastheade-et a view-bol ha be vagyunk logolva -%>
+    <%= render "shared/portfolio_masthead" unless logged_in?(:site_admin) %>
 
-      <!-- End of masthead -->
+
+    <!-- End of masthead -->
 
     <%= yield %>
 
-    <!-- Start fo Masthead -->
+    <!-- Start fo Footer -->
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
-    </footer>
+   <%= render "shared/portfolio_footer" %>
 
     <!-- End of Footer -->
 

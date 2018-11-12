@@ -1,6 +1,7 @@
 class Portfolio < ApplicationRecord
-	has_many :technologies
-	accepts_nested_attributes_for :technologies, 
+	has_many :technologies, dependent: :destroy
+	accepts_nested_attributes_for :technologies,
+                                allow_destroy: true, 
 	                              reject_if: lambda{ |attrs|attrs['name'].blank?}
 	include Placeholder
 	validates_presence_of :title, :body #Ez a record crealasnal a kitetel, mi nem lehet nill 
@@ -11,6 +12,10 @@ class Portfolio < ApplicationRecord
 
   def self.rails
   	where(subtitle: 'Rails')
+  end
+
+  def self.by_position
+    order("position ASC")
   end
 
   after_initialize :set_defaults

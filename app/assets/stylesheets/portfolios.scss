@@ -1,4 +1,9 @@
 @import "bootstrap";
+@import "font-awesome.css";
+@import "jquery-ui";
+@import "gritter";
+
+
 
 :root {
   --jumbotron-padding-y: 3rem;
@@ -49,4 +54,13 @@ footer p {
  .text-white li{
  color:#6c757d;
  }
+
+ .list-unstyled h4{
+ margin-right:30px;
+ }
+
+ h1{
+ font-family:Georgia;
+ }
+
 

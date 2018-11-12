@@ -5,14 +5,10 @@
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4 align-bottom mt-5 mb-5">
 
-                     <h1 class="text-muted font-italic align-middle">Explore the Portfolio Part of Adam's site</h1></td>
+                     <Strong><h1 class="text-muted font-italic align-middle display-4 lead">Explore the Portfolio Part of Adam's site</h1></Strong>
                      
-                       <nav class="list-unstyled ">
-                       <h4 class="font-weight-light"><%= link_to "Home", root_path, class:"p-2 text-muted" %>
-                       <%= link_to "About Me", about_me_path, class:"p-2 text-muted" %>
-                       <%= link_to "Contact", contact_path, class:"p-2 text-muted" %>
-                       <%= link_to "Blog", blogs_path, class:"p-2 text-muted" %>
-                       <%= link_to "Portfolio", portfolios_path, class:"p-2 text-muted" %></h4>
+                       <nav class="list-unstyled font-weight-light text-muted h4">
+                       <%= nav_helper 'text-muted pr-3','span'%>
                        </nav>
      
             </div>
@@ -24,11 +20,16 @@
         <div class="container d-flex justify-content-between">
           <div class="col-rw-4">
           
-            <%= link_to "Contact with the owner of this Site", about_me_path, class:"text-muted"  %>
+            <% if logged_in?(:site_admin) %>
+            <%= link_to "Create new Portfolio Post", new_portfolio_path, class:"text-primary" %>
+            <% else %>
+            <%= link_to "Contact with the owner of this Site", about_me_path, class:"text-primary"  %>
+            <% end %>
 
           </div>
           
           <div class="col-rw-2">
+            <p id="notice" style="margin: auto"><%= notice %></p>
           </div>
           <div class="col-rw-6">
           <%= login_helper 'p-2 text-primary' %>

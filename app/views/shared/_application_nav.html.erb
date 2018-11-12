@@ -1,13 +1,9 @@
 <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Adam Nemeth's Site</h3>
+          <h3 class="masthead-brand pt-1">Adam Nemeth's Site</h3>
           <nav class="nav nav-masthead justify-content-center">
-            <%= link_to "Home", root_path, class:"nav-link" %>
-            <%= link_to "About Me", about_me_path, class:'nav-link'  %>
-            <%= link_to "Contact", contact_path, class:'nav-link'  %>
-            <%= link_to "Blog", blogs_path, class:'nav-link'  %>
-            <%= link_to "Portfolio", portfolios_path, class:'nav-link'  %>
-            <%= login_helper 'nav-link' %>
+          	<%= nav_helper 'nav-link pr-2 pl-2','span'%>
+            <%= login_helper 'nav-link ml-3 text-primary' %>
           </nav>
         </div>
 </header>
