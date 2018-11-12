@@ -1,8 +1,7 @@
 @import "bootstrap";
 @import "font-awesome.css";
 @import "jquery-ui";
-
-
+@import "gritter";
 /*
  *= require jquery-ui
  */
@@ -36,7 +35,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #332f2f;
   text-align:center;
 }
 
@@ -151,7 +150,6 @@ body {
 .link_for_mail{
   font-size:3em
 }
-
 
 
 

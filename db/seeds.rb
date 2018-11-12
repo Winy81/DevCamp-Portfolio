@@ -29,7 +29,14 @@ puts "5 skills created"
 	Portfolio.create!(
      title: "Portfolio title: #{portfolio_item}",
      subtitle: "Rails",
-     body: "Barmi a bodyba johet"
+     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+     Nam id ante lobortis, accumsan elit sed, elementum nisi. Etiam sed ligula eget urna mattis mollis. 
+     Nunc fermentum quam sit amet felis volutpat interdum. Ut mollis eros eget laoreet egestas. 
+     In consectetur ex quis quam euismod mollis. Nam eget tellus consectetur, gravida dui eget, pharetra enim. 
+     Aenean a leo urna. Phasellus eget ante elementum, accumsan urna vel, condimentum nibh. 
+     Aliquam posuere dignissim mauris, a finibus massa placerat a.
+Phasellus porta tortor non accumsan vestibulum. Vivamus id odio libero. 
+Curabitur non erat dictum augue fringilla aliquet. Morbi vel sem condimentum, mattis mauris eget."
 		)
 end
 

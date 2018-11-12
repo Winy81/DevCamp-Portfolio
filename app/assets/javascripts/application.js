@@ -23,7 +23,9 @@
 
 //= require portfolios_coffee
 
-//= require turbolinks
+//= require cocoon
+
+//= require gritter
 
 //= require_tree .
 

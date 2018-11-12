@@ -50,7 +50,7 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
+    
   end
 
   def destroy
@@ -70,8 +70,9 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title, 
                                       :subtitle, 
                                       :body, 
-                                      :thumb_image, 
-                                      technologies_attributes: [:name]
+                                      :thumb_image,
+                                      :main_image, 
+                                      technologies_attributes: [:id, :name, :_destroy]
                                       )
   end
 

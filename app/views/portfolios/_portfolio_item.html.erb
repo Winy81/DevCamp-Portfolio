@@ -1,19 +1,18 @@
  <div id="sorting" class="col-md-4">
 
-                <div class="card-body">
-                	
+                <div class="card-body" style="max-width:350px; max-height:230px; overflow: hidden; background-position: center; display: block;">
                   <%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
                 </div>
-                <div class="d-flex justify-content-between align-items-center">
-                   <h6 class="text-muted"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %> / 
-                   <%= portfolio_item.subtitle %></h6>
+                <div class="d-flex justify-content-between" style="margin-top: 15px;padding-right: 20px">
+                   <h5 class="text-muted" style="padding-left:20px;"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id)%></br> 
+                   <%= portfolio_item.subtitle %></h5>
                   
                 </div>
   
 
                <% if logged_in?(:site_admin) %>
-               <p><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin) %> / 
-               <%= link_to "Delete Portfolio Item", portfolio_path(portfolio_item), class:"text-danger", method: :delete, data: {confirm: "Are you sure"} if logged_in?(:site_admin)%></p>
+               <p class="text-center"><%= link_to "Edit", edit_portfolio_path(portfolio_item.id),class:"btn btn-warning text-white" if logged_in?(:site_admin) %> -
+               <%= link_to "Delete Portfolio Item", portfolio_path(portfolio_item), class:"btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure"} if logged_in?(:site_admin)%></p>
                <% end %>
 
 </div>

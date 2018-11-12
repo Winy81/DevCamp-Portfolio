@@ -1,7 +1,18 @@
 
 <%= form_for(@portfolio_item) do |f| %>
+
+ <% if @portfolio_item.errors.any? %>
+   
+    <% @portfolio_item.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "Adam's site", sticky: false, time: 5000) %>
+    <% end %>
+
+<% end %>
+
+
 <div class="row">
   <div class="col-md-6">
+    <h3>Tag details</h3></br>
     <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title, class:"form-control" %>
@@ -16,17 +27,25 @@
       <p>Link for image</p>
       <%= f.text_area :thumb_image, class:"form-control" %>
      </div>
-  </div>
-  <div class="col-md-6">
-     <div>
-       <%= f.fields_for :technologies do |technologies_form| %>
-         <div class="form-group">
-          <%= technologies_form.label :name %>
-          <%= technologies_form.text_field :name, class:"form-control" %>
-         </div>
-       <% end %>
-    </div>
 
+      <div class="form-group">
+      <p>Link for image</p>
+      <%= f.text_area :main_image, class:"form-control" %>
+     </div>
+     
+  </div>
+ <div class="col-md-6">
+    <h3>Technologies details</h3></br>
+      <div>
+       <%= f.fields_for :technologies do |technology_form| %>
+       <%= render 'technology_fields', f: technology_form %>
+       <!-- innen az f: valtozot adjuk at a partical fileba -->
+       <% end %>
+      </div>
+    <div>
+       <%= link_to_add_association 'Add More Technologies', f, :technologies %>
+        <!--Az itt levo f az nem a blokkbol jon hanem az a form f-je amit pl feljebb hasznalunk a loopokban az oldal tetejerol -->
+    </div>
   </div>
   <div class="col-md-12">
 
@@ -40,4 +59,9 @@
     <div class="form-group">
       <%= f.submit 'Save Portfolio Item', class: 'btn btn-primary btn-block' %>
     </div>
+    <div class="form-group row">
+      <div class="col-md-4"></div>
+     <%= link_to 'Delete', portfolio_path(@portfolio_item),class:"btn btn-outline-danger col-md-4", method: :delete, data: {confirm: "Are you sure"} if logged_in?(:site_admin)%> 
+    </div>
+    <div class="col-md-4"></div>
 <% end %>
