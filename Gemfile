@@ -74,15 +74,16 @@ gem 'petergate', '~> 1.8', '>= 1.8.1'
 
 gem 'jquery-rails'
 
-gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.exit1'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'bootstrap_form'
 gem 'bootstrap4-kaminari-views'
-
+gem 'dotenv-rails'
 
 gem 'cocoon', '~> 1.2', '>= 1.2.12'
 gem 'gritter'
+gem 'twitter', '~> 6.2'
 
