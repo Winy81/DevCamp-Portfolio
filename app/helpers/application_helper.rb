@@ -32,6 +32,7 @@ module ApplicationHelper
     <#{tag_type}><a href="#{contact_path}" class="#{style} #{active? contact_path}">Contact</a></#{tag_type}>
     <#{tag_type}><a href="#{blogs_path}" class="#{style} #{active? blogs_path}">Blog</a></#{tag_type}>
     <#{tag_type}><a href="#{portfolios_path}" class="#{style} #{active? portfolios_path}">Portfolio</a></#{tag_type}>
+    <#{tag_type}><a href="#{tech_news_path}" class="#{style} #{active? blogs_path}">Tech-News</a></#{tag_type}>
     NAV
     
     nav_links.html_safe

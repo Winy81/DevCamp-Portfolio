@@ -1,20 +1,18 @@
 
 
 
-
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-      <main role="main" class="inner cover mt-3">
-        <h1 class="cover-heading mt-5 mb-5">Rails News</h1>
+      <main role="main" class="inner cover mt-2">
+        <h1 class="cover-heading mb-5">Rails News</h1>
         </br>
+        <div class="tech_news_body">
         <% @tweets.each do |tweet| %>
-        <p class="lead mb-4"><%= twitter_parser(tweet) %> </p>
+        <p class="lead mb-4 shadow-sm p-3 mb-5 bg-black rounded border_for_tweet"><%= twitter_parser(tweet) %> </p>
     </br>
     </br>
         <% end %>
-        <p class="lead">
-          <%= link_to "Top", tech_news_path, class:"btn btn-secondary" %>
-        </p>
+        </div>
       </main>
 
  
