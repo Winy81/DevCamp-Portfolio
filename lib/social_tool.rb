@@ -8,7 +8,7 @@ module SocialTool
     end
 
     client.search("#rails", result_type: 'recent').take(15).collect do |tweet|
-      "#{tweet.user.screen_name}:#{tweet.text}"
+      "#{"Tweet by: " + tweet.user.screen_name}: #{tweet.text}"
 
     end
   end
