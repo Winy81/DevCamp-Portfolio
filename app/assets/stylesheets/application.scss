@@ -151,6 +151,21 @@ body {
   font-size:3em
 }
 
+.tech_news_body{
+  height:475px;
+  width:800px;
+  margin:auto;
+  overflow-y:scroll;
+}
+
+.tech_news_body a{
+  color:#007bff;
+  font-weight:500;
+}
+
+.border_for_tweet{
+  border-left:5px solid white;
+}
 
 
 
