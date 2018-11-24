@@ -18,5 +18,13 @@
     <%= @blog.created_at%>
   </p>
 
+  <!-- Start of the comment form -->
+  <%= render 'comments/comment_form' %>
+  <!-- End of the comment form -->
+
+  <!-- Start of the comments -->
+  <%= render @blog.comments %>
+  <!-- End of the comments -->
+
  </div>
 
