@@ -86,4 +86,5 @@ gem 'dotenv-rails'
 gem 'cocoon', '~> 1.2', '>= 1.2.12'
 gem 'gritter'
 gem 'twitter', '~> 6.2'
+gem 'redis', '~> 4.0', '>= 4.0.3'
 
