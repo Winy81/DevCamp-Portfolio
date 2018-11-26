@@ -5,7 +5,7 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body #Ez a record crealasnal a kitel, mi nem lehet nill 
 
-  belongs_to :topic
+  #belongs_to :topic
 
   has_many :comments, dependent: :destroy
 end

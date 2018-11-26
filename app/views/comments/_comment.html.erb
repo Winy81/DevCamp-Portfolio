@@ -12,9 +12,6 @@
               <div class="text-muted small">
                Comment posted by: <span class="text-primary font-weight-bold font-italic"><%= comment.user.name %> </span> <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago
               </div>
-              <div class="text-muted small">
-               Answered for " <span class="font-weight-bold font-italic"><%= @blog.title %></span> " what has been created <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago
-              </div>
             </div>
           </div>
         </div>
