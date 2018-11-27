@@ -7,8 +7,12 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.order(:id).all
-    @page_title = "My Portfolio Blog" #cimsor beallitas a bongeszoben a blog sekcioban
+    if logged_in?(:site_admin)
+      @blogs = Blog.recent.all
+    else
+      @blogs=Blog.published.recent.all 
+    end
+      @page_title = "My Portfolio Blog" #cimsor beallitas a bongeszoben a blog sekcioban
   end
 
   # GET /blogs/1
