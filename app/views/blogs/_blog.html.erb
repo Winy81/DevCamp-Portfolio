@@ -1,5 +1,6 @@
       <div class="blog-post mt-5">
             <h2 class="blog-post-title"><%=link_to blog.title.upcase, blog%></h2>
+            <h4><%= link_to blog.topic.title, topics_path%></h4>
                <%-#A kovetkezo sora a distance_of_time_in_words vagy a time_ago_in_words method irja ki szavakkal a datum alapjan mikor volt krealva a pst. Ket argument, az elso a kreacio az adatbazisbol a masodik az ido most es a ketto kulonbsegevel szamol -%>
 
 
