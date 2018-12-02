@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
     else
       @blogs=Blog.published.recent.all 
     end
-      @page_title = "My Portfolio Blog" #cimsor beallitas a bongeszoben a blog sekcioban
+      @page_title = "Adam's Portfolio Blog" #cimsor beallitas a bongeszoben a blog sekcioban
   end
 
   # GET /blogs/1

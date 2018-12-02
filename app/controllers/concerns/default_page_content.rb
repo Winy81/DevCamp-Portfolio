@@ -6,7 +6,7 @@ module DefaultPageContent
     end
 #dinamikus cim beallitas a bongeszo fulben...
     def set_page_defaults
-		@page_title = "Devcamp Portfolio | My Portfolio website"
+		@page_title = "Adam's Portfolio website"
 		@seo_keywords = "Adam Nemeth portfolio"
 	end
 
