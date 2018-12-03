@@ -6,7 +6,12 @@
 
             <p><%= blog.body %></p>
             <h6 class="mt-5">Last comment:</h6>
-            <p class="ml-2 text-muted text-capitalize"><%= blog.comments.last.content %> - <span class="small"><em>Created by::<%= blog.comments.last.user.name %> - <%= distance_of_time_in_words(blog.comments.last.created_at, Time.now) %> ago</em></span></p> 
+            <p class="ml-2 text-muted">
+               <% if blog.comments.last == nil %>
+               "No comment for this blog yet"
+               <% else %>
+               <%= blog.comments.last.content %> - <span class="small"><em>Created by::<%= blog.comments.last.user.name %> - <%= distance_of_time_in_words(blog.comments.last.created_at, Time.now) %> ago</em></span></p>
+               <% end %> 
             
             <hr>
 
