@@ -22,11 +22,9 @@
 
 
             <% if logged_in?(:site_admin) %>
-               <p class="blog-post-meta">
-               <%= link_to blog.status, toggle_status_blog_path(blog) %> /
-               <%= link_to 'Edit', edit_blog_path(blog), class:"text-primary"  %> /
-               <%= link_to 'Destroy', blog, class:"text-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-
+            <nav class="breadcrumb bg-light">
+               <%= link_to blog.status.capitalize, toggle_status_blog_path(blog), class:"breadcrumb-item" %><%= link_to 'Edit', edit_blog_path(blog), class:"breadcrumb-item text-primary"  %><%= link_to 'Destroy', blog, class:"breadcrumb-item text-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+            </nav>
             <% end %>
 
         
