@@ -1,3 +1,22 @@
+User.create!(
+ email: "test@test.com",
+ password: "password",
+ password_confirmation: "password",
+ name: "Admin_User",
+ roles: "site_admin"
+)
+
+puts "1 Admin user created"
+
+User.create!(
+ email: "test2@test.com",
+ password: "password",
+ password_confirmation: "password",
+ name: "Regular_User"
+)
+
+puts "1 Regular user created"
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
@@ -6,7 +25,7 @@ end
 
 puts "3 Topics created"
 
-10.times do |blog|
+8.times do |blog|
 	Blog.create!(
      title: "My Blog Post #{blog}",
      body: "Bamri randnom",
@@ -41,16 +60,6 @@ Curabitur non erat dictum augue fringilla aliquet. Morbi vel sem condimentum, ma
 end
 
 puts "8 portfolio item created"
-
-1.times do |portfolio_item|
-	Portfolio.create!(
-     title: "Portfolio title: #{portfolio_item}",
-     subtitle: "Angular",
-     body: "Barmi faszsag, nemtuom mire"
-		)
-end
-
-puts "+1 portfolio item created"
 
 3.times do |technology|
     Technology.create!(
