@@ -36,4 +36,16 @@ module PagesHelper
      end
   end
 
+   def level_of_bar(percent)
+     if percent >= 75
+       "Senior skill level"
+     elsif percent >= 50
+       "Usefull skills"
+     elsif percent >= 25
+       "Basic knowladge"
+     else
+       "Basic"
+     end
+  end
+
 end
