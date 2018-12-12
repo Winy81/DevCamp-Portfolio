@@ -8,7 +8,7 @@
 <div class="skills w-50 m-auto"><h2>Skills</h2><br>
  <% @skills.each do |skill|%>
  <strong><%= skill.title %></strong>
-  <div class="progress">
+  <div class="progress" style="border-radius: 11px; height: 20px; border: 2px solid white">
      <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar bg-muted <%= color_of_bar(skill.percent_utilized) %>" role="progressbar" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemax ="100" style="width: <%= skill.percent_utilized %>%"><strong class="text-left pl-3 text-light"> - <%= level_of_bar(skill.percent_utilized) %> - </strong>
      </div>
   </div>
