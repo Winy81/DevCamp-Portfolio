@@ -1,4 +1,4 @@
-<div id="contact_content" style="background-image: url('/assets/envelope.png'); background-position: center; background-repeat: no-repeat; padding-bottom: 130px; padding-top: 130px;">
+<div id="contact_content"> <!---style="background-image: url('/assets/envelope.png'); background-position: center; background-repeat: no-repeat; padding-bottom: 130px; padding-top: 130px;">--->
 <h1>Would you like to work together?</h1>
 <h3></h3>
 <div class="link_for_mail">
@@ -12,7 +12,7 @@
 <%-#A number_to_phone metodusa a mogotte levo stringet convertalja telefon szam formatumma. -%>
 
 <% if logged_in?(:site_admin) %>
-<p><%= number_to_phone "111111111"%></p>
+<p><%= number_to_phone "Phone number is not avilable - send email first please"%></p>
 <% end %>
 </div>
 

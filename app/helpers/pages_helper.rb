@@ -23,4 +23,29 @@ module PagesHelper
     end.html_safe
 
   end
+
+   def color_of_bar(percent)
+     if percent >= 75
+       "progress-bar bg-danger"
+     elsif percent >= 50
+       "progress-bar bg-warning"
+     elsif percent >= 25
+       "progress-bar bg-success"
+     else
+       "progress-bar bg-muted"
+     end
+  end
+
+   def level_of_bar(percent)
+     if percent >= 75
+       "Senior skill level"
+     elsif percent >= 50
+       "Usefull skills"
+     elsif percent >= 25
+       "Basic knowladge"
+     else
+       "Basic"
+     end
+  end
+
 end
