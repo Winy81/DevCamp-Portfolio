@@ -86,7 +86,7 @@ gem 'dotenv-rails'
 gem 'cocoon', '~> 1.2', '>= 1.2.12'
 gem 'gritter'
 gem 'twitter', '~> 6.2'
-gem 'redis', '~> 4.0', '>= 4.0.3'
+gem 'redis', '~> 3.3', '>= 3.3.3'
 #for text tabs
 gem 'redcarpet', '~> 3.4' #for tabs
 gem 'coderay', '~> 1.1', '>= 1.1.2' #for highlights
