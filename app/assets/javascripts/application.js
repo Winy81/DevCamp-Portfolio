@@ -13,7 +13,6 @@
 //= require jquery3
 //= require jquery-ui
 //= require popper
-//= require bootstrap-sprockets
 //= require activestorage
 //= require portfolios_coffee
 //= require cocoon
@@ -21,4 +20,5 @@
 //= require cable
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-sprockets
 
