@@ -23,7 +23,7 @@
             <% if logged_in?(:site_admin) %>
             <%= link_to "Create new Portfolio Post", new_portfolio_path, class:"text-primary" %>
             <% else %>
-            <%= link_to "Contact with the owner of this Site", about_me_path, class:"text-primary"  %>
+            <%= link_to "Contact with the owner of this Site", contact_path, class:"text-primary"  %>
             <% end %>
 
           </div>
