@@ -7,7 +7,7 @@
 		<div class="col-md-5">
             <h4>Title of post: <%= @portfolio_item.title %></h4>
             <hr>
-            <a href="<%= @portfolio_item.subtitle %>"><h6><%= @portfolio_item.subtitle %></h6></a>
+            <h5>Link: <a href="<%= @portfolio_item.subtitle %>"><%= @portfolio_item.subtitle %></h5></a>
             <p><%= @portfolio_item.body %></p>
             <h6>Created at: <%= @portfolio_item.created_at %></h6>
             <hr>
