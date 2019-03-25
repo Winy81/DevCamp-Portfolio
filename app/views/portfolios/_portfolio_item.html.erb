@@ -1,11 +1,11 @@
  <div id="sorting" class="col-md-4">
 
                 <div class="card-body" style="max-width:350px; max-height:230px; overflow: hidden; background-position: center; display: block;">
-                  <%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
+                  <a href="<%= portfolio_show_path(portfolio_item.id) %>"><%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %></a>
                 </div>
                 <div class="d-flex justify-content-between" style="margin-top: 15px;padding-right: 20px">
-                   <h5 class="text-muted" style="padding-left:20px;">Title: <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id)%></br>
-                   <a href="<%= portfolio_item.subtitle %>">Visit the site</a></h5>
+                   <h6 class="text-muted" style="padding-left:20px;">Title: <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id)%></br>
+                   <a href="<%= portfolio_item.subtitle %>">Visit the site</a></h6>
                   
                 </div>
   
