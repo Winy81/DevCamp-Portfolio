@@ -88,7 +88,7 @@ gem 'gritter'
 gem 'twitter', '~> 6.2'
 gem 'redis', '~> 3.3', '>= 3.3.3'
 #for text tabs
-gem 'redcarpet', '~> 3.4' #for tabs
+gem 'redcarpet', '~> 3.5' #for tabs
 gem 'coderay', '~> 1.1', '>= 1.1.2' #for highlights
 
 ruby "2.4.0"
